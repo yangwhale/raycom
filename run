@@ -21,31 +21,31 @@ __dataflow() {
     mvn -Pdataflow-runner compile exec:java \
         -Dexec.mainClass=bindiego.BindiegoStreaming \
         -Dexec.cleanupDaemonThreads=false \
-        -Dexec.args="--project=google.com:bin-wus-learning-center \
+        -Dexec.args="--project=chris-demo-258505 \
         --streaming=true \
         --autoscalingAlgorithm=THROUGHPUT_BASED \
         --maxNumWorkers=20 \
         --workerMachineType=n1-standard-2 \
         --diskSizeGb=64 \
         --numWorkers=3 \
-        --tempLocation=gs://bindiego/tmp/ \
-        --gcpTempLocation=gs://bindiego/tmp/gcp/ \
-        --gcsTempLocation=gs://bindiego/tmp/gcs/ \
-        --stagingLocation=gs://bindiego/staging/ \
+        --tempLocation=gs://chris-demo/tmp/ \
+        --gcpTempLocation=gs://chris-demo/tmp/gcp/ \
+        --gcsTempLocation=gs://chris-demo/tmp/gcs/ \
+        --stagingLocation=gs://chris-demo/staging/ \
         --runner=DataflowRunner \
-        --topic=projects/google.com:bin-wus-learning-center/topics/dingoactions \
-        --subscription=projects/google.com:bin-wus-learning-center/subscriptions/dingoactions2avro \
+        --topic=projects/chris-demo-258505/topics/dingoactions \
+        --subscription=projects/chris-demo-258505/subscriptions/dingoactions-sub-2 \
         --numShards=1 \
         --windowSize=6s \
         --allowedLateness=8s \
         --earlyFiringPeriod=2s \
         --lateFiringCount=1 \
         --filenamePrefix=raycom. \
-        --outputDir=gs://bindiego/raycom/out/ \
-        --errOutputDir=gs://bindiego/raycom/out/err/ \
-        --bqSchema=gs://bindiego/raycom/schemas/dingoactions.json \
-        --bqOutputTable=google.com:bin-wus-learning-center:raycom.dingoactions \
-        --avroSchema=gs://bindiego/raycom/schemas/dingoactions.avsc \
+        --outputDir=gs://chris-demo/raycom/out/ \
+        --errOutputDir=gs://chris-demo/raycom/out/err/ \
+        --bqSchema=gs://chris-demo/raycom/schemas/dingoactions.json \
+        --bqOutputTable=chris-demo-258505:raycom.dingoactions \
+        --avroSchema=gs://chris-demo/raycom/schemas/dingoactions.avsc \
         --jobName=raycom-streaming \
         --region=asia-east1"
         # --update \
