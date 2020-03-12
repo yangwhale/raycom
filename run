@@ -41,11 +41,11 @@ __dataflow() {
         --earlyFiringPeriod=2s \
         --lateFiringCount=1 \
         --filenamePrefix=raycom. \
-        --outputDir=gs://bindiego/raycom/out/ \
-        --errOutputDir=gs://bindiego/raycom/out/err/ \
-        --bqSchema=gs://bindiego/raycom/schemas/dingoactions.json \
-        --bqOutputTable=google.com:bin-wus-learning-center:raycom.dingoactions \
-        --avroSchema=gs://bindiego/raycom/schemas/dingoactions.avsc \
+        --outputDir=gs://chris-demo/raycom/out/ \
+        --errOutputDir=gs://chris-demo/raycom/out/err/ \
+        --bqSchema=gs://chris-demo/raycom/schemas/dingoactions.json \
+        --bqOutputTable=google.com:chris-demo-258505:raycom.dingoactions \
+        --avroSchema=gs://chris-demo/raycom/schemas/dingoactions.avsc \
         --btInstanceId=bigbase \
         --btTableId=streaming \
         --jdbcClass=com.mysql.cj.jdbc.Driver \
