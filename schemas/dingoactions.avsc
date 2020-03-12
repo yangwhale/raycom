@@ -3,7 +3,7 @@
   "name": "dingoactions",
   "fields": [
       {
-        "name": "ts",
+        "name": "event_ts",
         "type": "long",
         "logicalType": "timestamp-millis"
       }, 
@@ -18,6 +18,23 @@
       {
         "name": "seq",
         "type": "int"
+      },
+      {
+        "name": "dim1",
+        "type": "string"
+      },
+      {
+        "name": "metrics1",
+        "type": "int"
+      },
+      {
+        "name": "process_ts",
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }, 
+      {
+        "name": "dim1_val",
+        "type": "string"
       }
   ]
 }
